@@ -1,5 +1,6 @@
 import React from 'react'
 import Form from './Components/Form'
+import Signup from './Components/Signup'
 
 export default function App() {
   // const [user, setUser] = useState("");
@@ -28,6 +29,8 @@ export default function App() {
   // }
 
   return (
-    <Form />
+    // <Form />
+    <Signup />
+
   )
 }
