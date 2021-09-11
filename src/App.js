@@ -1,7 +1,5 @@
-import React, { useState } from 'react'
-import Arr from './Arr'
-import Filter from './Filter'
-import { Home } from './Components/Home'
+import React from 'react'
+import Form from './Components/Form'
 
 export default function App() {
   // const [user, setUser] = useState("");
@@ -13,35 +11,23 @@ export default function App() {
   //   </div>
   // )
 
-  const [data, setData] = useState({
-    userName: '',
-    password: ''
-  })
+  // const [data, setData] = useState({
+  //   userName: '',
+  //   password: ''
+  // })
 
-  const { userName, password } = data;
+  // const { userName, password } = data;
 
-  const onchange = (e) => {
-    setData({ ...data, [e.target.name]: [e.target.value] })
-  }
+  // const onchange = (e) => {
+  //   setData({ ...data, [e.target.name]: [e.target.value] })
+  // }
 
-  const submitHandler = e => {
-    e.preventDefault();
-    console.log(data);
-  }
+  // const submitHandler = e => {
+  //   e.preventDefault();
+  //   console.log(data);
+  // }
 
   return (
-    <div>
-      <form onSubmit={submitHandler}>
-        <input type="text" name="userName" value={userName} onChange={onchange} />
-        <input type="password" name="password" value={password} onChange={onchange} />
-        <input type="submit" />
-      </form>
-
-      <Arr />
-      <Filter />
-
-      <br />
-      <Home />
-    </div>
+    <Form />
   )
 }
