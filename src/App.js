@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Arr from './Arr'
+import Filter from './Filter'
 
 export default function App() {
   // const [user, setUser] = useState("");
@@ -36,6 +37,7 @@ export default function App() {
       </form>
 
       <Arr />
+      <Filter />
     </div>
   )
 }
