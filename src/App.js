@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Arr from './Arr'
 
 export default function App() {
   // const [user, setUser] = useState("");
@@ -33,6 +34,8 @@ export default function App() {
         <input type="password" name="password" value={password} onChange={onchange} />
         <input type="submit" />
       </form>
+
+      <Arr />
     </div>
   )
 }
