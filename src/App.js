@@ -1,6 +1,12 @@
 import React from 'react'
 import Form from './Components/Form'
+import NavBar from './Components/NavBar'
 import Signup from './Components/Signup'
+import './App.css'
+import { BrowserRouter,Route,Switch } from 'react-router-dom'
+import { Home } from './Components/Home'
+import Dashboard from './Components/Dashboard'
+import about from './Components/about'
 
 
 export default function App() {
@@ -31,7 +37,16 @@ export default function App() {
 
   return (
     // <Form />
-    <Signup />
+    //<Signup />
+    <BrowserRouter> 
+    <NavBar />
+    <Switch>
+      <Route path="/" exact component={Home} />
+      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/about" exact component={about} />
+    </Switch>
+    </BrowserRouter>
+   
 
   )
 }
