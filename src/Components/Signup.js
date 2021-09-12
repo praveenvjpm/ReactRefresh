@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
+import axios from 'axios'
 
 const Signup = () => {
 
     const [data, setData] = useState({
-        usernmae: '',
+        username: '',
         password: '',
         repassword: ''
     });
@@ -23,6 +24,8 @@ const Signup = () => {
         } else {
             console.log("Invalid Data");
         }
+
+        axios.post('https://reactapi-f3d61-default-rtdb.firebaseio.com/register.json',data).then(()=> alert("Success Data saved"))
     }
 
     return (
