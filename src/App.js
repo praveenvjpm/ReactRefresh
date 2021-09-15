@@ -42,7 +42,7 @@ export default function App() {
     <NavBar />
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/dashboard/:name" exact component={Dashboard} />
       <Route path="/about" exact component={about} />
     </Switch>
     </BrowserRouter>

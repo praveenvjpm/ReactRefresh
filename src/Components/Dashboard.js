@@ -1,9 +1,9 @@
 import React from 'react'
 
-const Dashboard = () => {
+const Dashboard = ({match}) => {
     return (
         <div>
-            <center>This is Dashboard!!!</center>
+            <center>This is Dashboard!!! {match.params.name}</center>
         </div>
     )
 }
